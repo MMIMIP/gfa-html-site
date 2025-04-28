@@ -1,0 +1,1676 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MI본부 글로벌 사업 미션 & 전략</title>
+    <style>
+        :root {
+            --primary-color: #063970;
+            --secondary-color: #4B89DC;
+            --accent-color: #FFC107;
+            --text-color: #333333;
+            --light-bg: #f4f8fb;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Pretendard', 'Noto Sans KR', sans-serif;
+        }
+        
+        body {
+            background-color: var(--light-bg);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 30px 0;
+        }
+        
+        header .logo {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        header .date {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        
+        header .title {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        header .subtitle {
+            font-size: 16px;
+            color: #555;
+        }
+        
+        .main-cover {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 30px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            background-image: linear-gradient(135deg, var(--primary-color), #0a4b91);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .main-cover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><polygon points="0,0 100,100 0,100" fill="%231a5aa0" opacity="0.3"/><polygon points="100,0 100,100 0,0" fill="%231a5aa0" opacity="0.3"/></svg>');
+            background-size: 300px;
+            opacity: 0.5;
+            z-index: 1;
+        }
+        
+        .main-cover-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .main-cover h1 {
+            font-size: 48px;
+            font-weight: 700;
+            margin-bottom: 20px;
+        }
+        
+        .main-cover p {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .confidential {
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+        
+        .confidential i {
+            margin-right: 5px;
+        }
+        
+        .section {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+        }
+        
+        .section-title {
+            position: relative;
+            color: var(--primary-color);
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .section-title .number {
+            font-weight: 800;
+            margin-right: 5px;
+        }
+        
+        .index-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 15px;
+            padding-left: 20px;
+        }
+        
+        .index-item .bullet {
+            font-size: 20px;
+            color: var(--primary-color);
+            margin-right: 10px;
+        }
+        
+        .index-subitems {
+            margin-left: 40px;
+            margin-top: 10px;
+        }
+        
+        .index-subitem {
+            display: flex;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        
+        .index-subitem .circle {
+            width: 8px;
+            height: 8px;
+            background-color: var(--secondary-color);
+            border-radius: 50%;
+            margin-right: 10px;
+        }
+        
+        .badge {
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            background-color: var(--primary-color);
+            color: white;
+            margin-right: 10px;
+        }
+        
+        .data-block {
+            background-color: var(--light-bg);
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .data-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .data-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+        
+        .data-label {
+            font-weight: 600;
+            font-size: 18px;
+        }
+        
+        .data-value {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+        
+        .data-value.highlight {
+            color: #e74c3c;
+        }
+        
+        .data-value .change {
+            font-size: 14px;
+            margin-left: 5px;
+            color: #27ae60;
+        }
+        
+        .chart-container {
+            margin: 30px 0;
+            height: 300px;
+            position: relative;
+        }
+        
+        .bar-chart {
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            padding-top: 30px;
+            position: relative;
+        }
+        
+        .bar-group {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        .bar {
+            width: 30px;
+            background-color: var(--secondary-color);
+            margin: 0 auto;
+            position: relative;
+            border-radius: 4px 4px 0 0;
+        }
+        
+        .bar-label {
+            position: absolute;
+            bottom: -25px;
+            font-size: 12px;
+            text-align: center;
+            width: 100%;
+            white-space: nowrap;
+        }
+        
+        .bar-value {
+            position: absolute;
+            top: -20px;
+            width: 100%;
+            text-align: center;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        
+        .error-indicator {
+            position: absolute;
+            top: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            color: #e74c3c;
+            font-weight: bold;
+        }
+        
+        .chart-axis {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #ccc;
+        }
+        
+        .strategy-card {
+            background-color: var(--light-bg);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+        
+        .strategy-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 18px;
+        }
+        
+        .strategy-card p {
+            color: #555;
+            font-size: 15px;
+        }
+        
+        .strategy-actions {
+            margin-top: 10px;
+            padding-top: 10px;
+            border-top: 1px dashed #ddd;
+        }
+        
+        .strategy-action {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+        
+        .strategy-action .number {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 12px;
+            margin-right: 10px;
+            flex-shrink: 0;
+        }
+        
+        .pie-chart-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 30px 0;
+        }
+        
+        .pie-chart {
+            width: 300px;
+            height: 300px;
+            position: relative;
+        }
+        
+        .pie-chart-svg {
+            transform: rotate(-90deg);
+        }
+        
+        .pie-chart-legend {
+            flex: 1;
+            padding-left: 30px;
+        }
+        
+        .legend-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        
+        .legend-color {
+            width: 15px;
+            height: 15px;
+            border-radius: 3px;
+            margin-right: 10px;
+        }
+        
+        .legend-label {
+            font-size: 14px;
+        }
+        
+        .funnel {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin: 50px 0;
+        }
+        
+        .funnel-steps {
+            display: flex;
+            flex: 7;
+        }
+        
+        .funnel-step {
+            position: relative;
+            flex: 1;
+            text-align: center;
+            padding: 15px 10px;
+            background-color: var(--primary-color);
+            color: white;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        
+        .funnel-step::after {
+            content: "→";
+            position: absolute;
+            right: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #555;
+            font-size: 20px;
+        }
+        
+        .funnel-step:last-child::after {
+            display: none;
+        }
+        
+        .funnel-step .percentage {
+            position: absolute;
+            top: -25px;
+            width: 100%;
+            left: 0;
+            font-size: 14px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .funnel-values {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex: 3;
+            padding-left: 30px;
+        }
+        
+        .funnel-value {
+            display: flex;
+            margin-bottom: 10px;
+        }
+        
+        .funnel-value-number {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-right: 8px;
+        }
+        
+        .funnel-value-label {
+            font-size: 14px;
+            align-self: flex-end;
+            padding-bottom: 4px;
+        }
+        
+        .funnel-notes {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        
+        .funnel-notes h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .funnel-notes ul {
+            padding-left: 20px;
+        }
+        
+        .funnel-notes li {
+            margin-bottom: 5px;
+            font-size: 14px;
+        }
+        
+        .status-tag {
+            display: inline-block;
+            padding: 3px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 10px;
+        }
+        
+        .status-completed {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .status-progress {
+            background-color: #f39c12;
+            color: white;
+        }
+        
+        .status-planned {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .highlights {
+            margin-top: 20px;
+        }
+        
+        .highlight-item {
+            background-color: rgba(255, 193, 7, 0.1);
+            border-left: 3px solid var(--accent-color);
+            padding: 10px 15px;
+            margin-bottom: 10px;
+        }
+        
+        .task-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        .task-table th {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        .task-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .task-table tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        .hypothesis {
+            margin-bottom: 30px;
+            background-color: #f1f7fe;
+            border-radius: 8px;
+            padding: 20px;
+        }
+        
+        .hypothesis-title {
+            font-size: 18px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .hypothesis-title .number {
+            display: inline-block;
+            width: 26px;
+            height: 26px;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 26px;
+            margin-right: 8px;
+            font-size: 14px;
+        }
+        
+        .hypothesis-desc {
+            margin-bottom: 15px;
+            font-size: 15px;
+            line-height: 1.6;
+        }
+        
+        .hypothesis-data {
+            background-color: rgba(255, 255, 255, 0.7);
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .action-plan {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .action-plan h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .expected-results {
+            margin-top: 15px;
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        
+        .expected-results h4 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+        
+        .expected-results ol {
+            padding-left: 20px;
+        }
+        
+        @media (max-width: 768px) {
+            .section {
+                padding: 20px;
+            }
+            
+            .main-cover {
+                padding: 40px 20px;
+            }
+            
+            .main-cover h1 {
+                font-size: 32px;
+            }
+            
+            .pie-chart-container {
+                flex-direction: column;
+            }
+            
+            .pie-chart {
+                width: 200px;
+                height: 200px;
+                margin-bottom: 20px;
+            }
+            
+            .pie-chart-legend {
+                padding-left: 0;
+            }
+            
+            .funnel {
+                flex-direction: column;
+            }
+            
+            .funnel-steps {
+                margin-bottom: 30px;
+            }
+            
+            .funnel-values {
+                padding-left: 0;
+            }
+        }
+        
+        .tab-headers {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+        
+        .tab-header {
+            padding: 10px 20px;
+            cursor: pointer;
+            background-color: #f1f1f1;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab-header.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        .roadmap {
+            margin: 20px 0;
+            position: relative;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 30px;
+        }
+
+        .timeline-stage {
+            flex: 1;
+            text-align: center;
+            padding: 15px 10px;
+            background-color: #e1e7f0;
+            position: relative;
+            margin-right: 4px;
+        }
+
+        .timeline-stage:last-child {
+            margin-right: 0;
+        }
+
+        .timeline-stage.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .stage-title {
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .stage-date {
+            font-size: 12px;
+            opacity: 0.8;
+        }
+
+        .roadmap-tasks {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .task-column {
+            flex: 1;
+            padding: 0 10px;
+        }
+
+        .task-item {
+            background-color: white;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 10px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .task-title {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .task-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #6bd098;
+            border-radius: 4px;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 8px;
+            font-size: 12px;
+            font-weight: normal;
+        }
+
+        .task-desc {
+            font-size: 13px;
+            color: #666;
+        }
+
+        .stage-box {
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .stage-header {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        .stage-description {
+            margin-bottom: 15px;
+        }
+
+        .stage-tasks {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .stage-task {
+            background-color: white;
+            padding: 10px 15px;
+            border-radius: 6px;
+            margin: 0 10px 10px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+            font-size: 14px;
+        }
+
+        .stage-task:before {
+            content: "✓";
+            color: #27ae60;
+            margin-right: 5px;
+        }
+
+        @media (max-width: 768px) {
+            .timeline {
+                flex-direction: column;
+            }
+            
+            .timeline-stage {
+                margin-right: 0;
+                margin-bottom: 5px;
+            }
+            
+            .roadmap-tasks {
+                flex-direction: column;
+            }
+            
+            .task-column {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">MI본부</div>
+            <div class="date">Apr. 2025</div>
+            <h1 class="title">글로벌 사업 미션 & 전략</h1>
+            <div class="subtitle">MI본부 글로벌 풀오토 비즈니스 진행 보고 - 26차</div>
+        </header>
+        
+        <div class="main-cover">
+            <div class="main-cover-content">
+                <div class="confidential"><i class="fas fa-lock"></i> Confidential</div>
+                <h1>글로벌 사업 미션 & 전략</h1>
+                <p>MI본부 글로벌 풀오토 비즈니스 진행 보고 - 26차</p>
+                <div>MI본부<br>Apr. 2025</div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title">INDEX</h2>
+            <div class="index-item">
+                <div class="bullet">●</div>
+                <div>
+                    <strong>서비스 안정화 3단계 (4/20 ~)</strong>
+                    <div class="index-subitems">
+                        <div class="index-subitem">
+                            <div class="circle"></div>
+                            <div>운영 지표 분석</div>
+                        </div>
+                        <div class="index-subitem">
+                            <div class="circle"></div>
+                            <div>영업 전략 구체화</div>
+                        </div>
+                        <div class="index-subitem">
+                            <div class="circle"></div>
+                            <div>기능 확장 플랜</div>
+                        </div>
+                        <div class="index-subitem">
+                            <div class="circle"></div>
+                            <div>자동화 진행 현황</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="badge">카페24 PRO - 글로벌</div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="number">01.</span> 지난 보고 피드백 요약</h2>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 15px; color: var(--primary-color);">이전 25차 보고 요약</h3>
+                
+                <div style="display: flex; margin-bottom: 30px;">
+                    <div style="flex: 1; padding: 15px; background-color: #f2f2f2; border-radius: 5px; margin-right: 10px;">
+                        <h4>서비스 운영 시<br>반영 필요 구간</h4>
+                    </div>
+                    <div style="flex: 3;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>1) 고객사 지표 판단 시 '등급' 관련 표현은 제거</strong>
+                        </div>
+                        <div style="margin-bottom: 10px;">
+                            <strong>2) Flow in 전략에 대한 강조. 카페24 풀오토 모델은 Lock in → Flow in 전략으로 전환</strong><br>
+                            '귀찮음'을 이용해 붙잡는 전략이 기술 발전 속도를 못 따라가면 금세 대체재가 등장한다'
+                        </div>
+                        <div style="font-size: 14px; margin-top: 10px;">
+                            ※ Lock in 전략의 경우 해지/이탈 방어하여 잔존율 극대화<br>
+                            ※ Flow in 전략의 경우 언제든 돌아오게 하는 순환성 확보하여 서비스 매력도 극대화<br>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display: flex;">
+                    <div style="flex: 1; padding: 15px; background-color: #f2f2f2; border-radius: 5px; margin-right: 10px;">
+                        <h4>서비스 고객<br>레퍼런스 확보</h4>
+                    </div>
+                    <div style="flex: 3;">
+                        <div style="margin-bottom: 10px;">
+                            <strong>실제 해외 판매까지 연결 되는 사례를 임의적으로라도 만들어볼 것 (마케팅 관점)</strong><br>
+                            레퍼런스로 만들어 볼 수 있는 고객사를 최대한 활용하여 성공 사례로 연결 될 수 있도록 진행
+                        </div>
+                        <div style="font-size: 14px; margin-top: 10px;">
+                            ※ 요리 프로그램 예시 (ex. 일부는 만들어진 음식을 활용하는 방법)
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="roadmap">
+                <h3 style="margin-bottom: 20px; color: var(--primary-color);">서비스 로드맵</h3>
+                
+                <div style="text-align: center; margin-bottom: 10px;">
+                    <span style="display: inline-block; padding: 8px 15px; background-color: var(--primary-color); color: white; border-radius: 20px; font-weight: bold;">🚀 목표 : PRO 글로벌 출시 후 발생할 수 있는 문제를 신속하게 대응하고 빠르게 서비스 안정성을 확보할 것</span>
+                </div>
+                
+                <div class="timeline">
+                    <div class="timeline-stage">
+                        <div class="stage-title">1단계 : 초기 운영 안정화</div>
+                        <div class="stage-date">3/26 - 4/6 (영업일 기준 7일)</div>
+                        <div style="margin-top: 15px;">
+                            <div style="margin-bottom: 10px;">✅ 기술적 안정성 모니터링</div>
+                            <div style="margin-bottom: 10px;">✅ 온보딩 단계 이슈 모니터링</div>
+                            <div style="margin-bottom: 10px;">✅ 초기 데이터 분석</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-stage">
+                        <div class="stage-title">2단계 : 데이터 기반 1차 최적화</div>
+                        <div class="stage-date">4/7 - 4/20 (영업일 기준 9일)</div>
+                        <div style="margin-top: 15px;">
+                            <div style="margin-bottom: 10px;">✅ 온보딩 데이터 분석 및 개선</div>
+                            <div style="margin-bottom: 10px;">✅ 운영 최적화</div>
+                            <div style="margin-bottom: 10px;">✅ 기술적 개선 조치</div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-stage active">
+                        <div class="stage-title">3단계 : 지속적 최적화 & 기능 확장</div>
+                        <div class="stage-date">4/20 ~</div>
+                        <div style="margin-top: 15px;">
+                            <div style="margin-bottom: 10px;">✅ 기능 확장 로드맵 구체화</div>
+                            <div style="margin-bottom: 10px;">✅ 운영 지표/데이터 분석 프로세스 구축</div>
+                            <div style="margin-bottom: 10px;">✅ 영업 KPI 및 전략 구체화</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="number">02.</span> 운영 지표 분석</h2>
+            <h3 style="margin-bottom: 20px;">서비스 현황 분석 측면</h3>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">서비스 신청 현황</h3>
+                
+                <div style="display: flex; justify-content: space-between; margin-bottom: 30px;">
+                    <div style="flex: 1; background-color: #e8f4ff; padding: 20px; border-radius: 8px; text-align: center; margin-right: 10px;">
+                        <div style="font-size: 14px; margin-bottom: 10px;">서비스 신청 현황</div>
+                        <div style="font-size: 32px; font-weight: bold; color: var(--primary-color);">672<span style="font-size: 18px;">개</span> <span style="color: #27ae60; font-size: 18px;">+119개</span></div>
+                        <div style="font-size: 12px; margin-top: 10px; color: #666;">※ 내부 TEST몰 제외 기준</div>
+                    </div>
+                    
+                    <div style="flex: 1; background-color: #e8f4ff; padding: 20px; border-radius: 8px; text-align: center; margin: 0 10px;">
+                        <div style="font-size: 14px; margin-bottom: 10px;">안정 운영 계정 수</div>
+                        <div style="font-size: 32px; font-weight: bold; color: var(--primary-color);">638<span style="font-size: 18px;">개</span></div>
+                        <div style="font-size: 12px; margin-top: 10px; color: #666;">※ 고객 안내 시작 및 자동화 실행 완료 기준</div>
+                    </div>
+                    
+                    <div style="flex: 1; background-color: #fff8e8; padding: 20px; border-radius: 8px; text-align: center; margin-left: 10px;">
+                        <div style="font-size: 14px; margin-bottom: 10px;">서비스 해지 현황</div>
+                        <div style="font-size: 32px; font-weight: bold; color: #f39c12;">7<span style="font-size: 18px;">개</span> <span style="color: #e74c3c; font-size: 18px;">+1개</span></div>
+                        <div style="font-size: 12px; margin-top: 10px; color: #666;">※ 해지 신청 후 처리 완료 기준</div>
+                    </div>
+                </div>
+                
+                <div style="margin-top: 30px;">
+                    <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; text-align: center;">
+                        <p>※ 일 평균 신규 신청 건수 : <strong>약 25건</strong> (누적 평균)</p>
+                        <p>※ 고객 요청 서비스 해지 사유 : 신청 실수, 단순 변심, 맞춤 운영 니즈</p>
+                    </div>
+                </div>
+                
+                <div class="chart-container">
+                    <div class="bar-chart">
+                        <!-- 차트는 여기에 표현될 것입니다 -->
+                        <div class="chart-axis"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">서비스 이용 고객</h3>
+                
+                <div style="display: flex; margin-bottom: 20px;">
+                    <div style="flex: 1; max-width: 400px;">
+                        <div style="background-color: var(--primary-color); color: white; padding: 10px; border-radius: 5px 5px 0 0; text-align: center;">
+                            <h4>해외 판매 체력 진단</h4>
+                        </div>
+                        
+                        <div style="display: flex; justify-content: center; margin: 20px 0;">
+                            <div style="width: 200px; height: 200px; position: relative; border-radius: 50%; background: conic-gradient(
+                                var(--primary-color) 0% 33.2%,
+                                #4B89DC 33.2% 54.3%,
+                                #3498DB 54.3% 62.3%,
+                                #2980B9 62.3% 70.9%,
+                                #1ABC9C 70.9% 78.9%,
+                                #16A085 78.9% 85.4%,
+                                #F1C40F 85.4% 100%
+                            );">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; color: white; font-weight: bold; font-size: 24px;">
+                                    33.2%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 2; padding-left: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center;">
+                                <span style="display: inline-block; margin-right: 10px;">🚀</span>해외 판매 체력 진단
+                            </h4>
+                            <p>국문 기본몰 매출 규모 판단<br>→ 사업 안정성 진단 & 브랜드/상품의 경쟁력 해석</p>
+                        </div>
+                        
+                        <div>
+                            <ol>
+                                <li style="margin-bottom: 8px;"><strong>기본몰 매출 없음 : 242개 (33.2%)</strong></li>
+                                <li style="margin-bottom: 8px;"><strong>기본몰 매출 1억 이상 : 32개 (4.4%)</strong></li>
+                                <ul style="list-style-type: none; margin-left: 15px;">
+                                    <li style="margin: 5px 0;">- <a href="#" style="color: var(--secondary-color);">MEAL IT 밀잇</a>(건강식품/단백질쉐이크) - 월 평균 매출 1억 이상</li>
+                                    <li style="margin: 5px 0;">- <a href="#" style="color: var(--secondary-color);">#BONG 샵봉</a>(화장품) - 월 평균 매출 3억 이상</li>
+                                    <li style="margin: 5px 0;">- <a href="#" style="color: var(--secondary-color);">미라네주방</a>(생활용품) - 월 평균 매출 3억 이상</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; margin-top: 30px; margin-bottom: 20px;">
+                    <div style="flex: 1; max-width: 400px;">
+                        <div style="background-color: #4B89DC; color: white; padding: 10px; border-radius: 5px 5px 0 0; text-align: center;">
+                            <h4>해외 판매 경험 확인</h4>
+                        </div>
+                        
+                        <div style="margin: 20px 0; padding: 0 20px;">
+                            <div style="width: 100%; height: 30px; background-color: #eee; position: relative; margin-bottom: 10px;">
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; width: 49px; background-color: var(--primary-color);"></div>
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; display: flex; align-items: center; padding-left: 10px; font-size: 14px; color: white;">USD (49)</div>
+                            </div>
+                            <div style="width: 100%; height: 30px; background-color: #eee; position: relative; margin-bottom: 10px;">
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; width: 23px; background-color: var(--primary-color);"></div>
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; display: flex; align-items: center; padding-left: 10px; font-size: 14px; color: white;">JPY (23)</div>
+                            </div>
+                            <div style="width: 100%; height: 30px; background-color: #eee; position: relative; margin-bottom: 5px;">
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; width: 9px; background-color: var(--primary-color);"></div>
+                                <div style="position: absolute; top: 0; left: 0; height: 100%; display: flex; align-items: center; padding-left: 10px; font-size: 14px; color: white;">기타 (9)</div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 2; padding-left: 30px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="color: var(--primary-color); margin-bottom: 10px; display: flex; align-items: center;">
+                                <span style="display: inline-block; margin-right: 10px;">🚀</span>해외 판매 경험 확인
+                            </h4>
+                            <p>PRO 글로벌로 생성한 해외몰 외에 자체 해외몰 운영 여부<br>→ 해외 판매에 대한 경험치 & PRO 글로벌 주력 계정 판단</p>
+                        </div>
+                        
+                        <div>
+                            <ol>
+                                <li style="margin-bottom: 8px;"><strong>해외몰 보유 고객사 : 54개</strong></li>
+                                <li style="margin-bottom: 8px;"><strong>최근 90일 이내 주문 및 매출이 있는 해외몰 수 : 81개</strong></li>
+                                <ul style="list-style-type: none; margin-left: 15px;">
+                                    <li style="margin: 5px 0;">- USD, JPY, VND, TWD, SGD, BRL, MYR, THB, PHP 총 9개 통화 설정</li>
+                                    <li style="margin: 5px 0;">- USD 49건 (1순위), JPY 23건 (2순위), 그 외 통화 2건 내외</li>
+                                </ul>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">서비스 이용 퍼널</h3>
+                
+                <div style="position: relative; margin: 30px 0;">
+                    <div style="display: flex; align-items: center; margin-bottom: 40px;">
+                        <div style="flex: 1; text-align: center; background-color: var(--primary-color); color: white; padding: 15px; border-radius: 5px; position: relative; margin-right: 10px;">
+                            <div style="position: absolute; top: -25px; width: 100%; text-align: center; font-weight: bold; color: var(--primary-color);">100%</div>
+                            <div>서비스 신청 완료</div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0 5px; color: #aaa;">→</div>
+                        <div style="flex: 1; text-align: center; background-color: var(--primary-color); color: white; padding: 15px; border-radius: 5px; position: relative; margin-right: 10px;">
+                            <div style="position: absolute; top: -25px; width: 100%; text-align: center; font-weight: bold; color: var(--primary-color);">94.9%</div>
+                            <div>자동화 실행 완료</div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0 5px; color: #aaa;">→</div>
+                        <div style="flex: 1; text-align: center; background-color: var(--primary-color); color: white; padding: 15px; border-radius: 5px; position: relative; margin-right: 10px;">
+                            <div style="position: absolute; top: -25px; width: 100%; text-align: center; font-weight: bold; color: var(--primary-color);">33.4%</div>
+                            <div>PG 계약 완료</div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0 5px; color: #aaa;">→</div>
+                        <div style="flex: 1; text-align: center; background-color: var(--primary-color); color: white; padding: 15px; border-radius: 5px; position: relative; margin-right: 10px;">
+                            <div style="position: absolute; top: -25px; width: 100%; text-align: center; font-weight: bold; color: var(--primary-color);">13.8%</div>
+                            <div>배송 계약 완료</div>
+                        </div>
+                        <div style="display: flex; align-items: center; margin: 0 5px; color: #aaa;">→</div>
+                        <div style="flex: 1; text-align: center; background-color: #4B89DC; color: white; padding: 15px; border-radius: 5px; position: relative;">
+                            <div>판매 개시</div>
+                            <div style="font-size: 14px; margin-top: 5px; color: #a0cfff;">판매 개시 알림 진행중</div>
+                        </div>
+                    </div>
+                    
+                    <div style="display: flex; margin-top: 30px;">
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 200px; width: 100px; background-color: var(--primary-color); position: relative; margin: 0 auto;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold; font-size: 18px;">672<span style="font-size: 14px;">개</span></div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 180px; width: 100px; background-color: var(--primary-color); position: relative; margin: 0 auto;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold; font-size: 18px;">638<span style="font-size: 14px;">개</span></div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 100px; width: 100px; background-color: var(--primary-color); position: relative; margin: 0 auto;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold; font-size: 18px;">225<span style="font-size: 14px;">개</span></div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; text-align: center;">
+                            <div style="height: 70px; width: 100px; background-color: var(--primary-color); position: relative; margin: 0 auto;">
+                                <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-weight: bold; font-size: 18px;">93<span style="font-size: 14px;">개</span></div>
+                            </div>
+                        </div>
+                        <div style="flex: 1; text-align: center;"></div>
+                    </div>
+                </div>
+                
+                <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 30px;">
+                    <h4 style="margin-bottom: 10px;">※ 퍼널 단계별 전환율 개선 전략</h4>
+                    <ol>
+                        <li style="margin-bottom: 8px;"><strong>PG 가입 독려 자동화 메시지 강화 (SMS & 알림톡)</strong> <span class="status-tag status-completed">실행</span></li>
+                        <li style="margin-bottom: 8px;"><strong>대표자앱에 PG 계약 관련 포함. 고객 동선 압축</strong> <span class="status-tag status-progress">기획중</span></li>
+                    </ol>
+                </div>
+                
+                <div style="background-color: #f9f9f9; padding: 15px; border-radius: 8px; margin-top: 20px;">
+                    <h4 style="margin-bottom: 10px;">※ 퍼널 단계별 전환율 개선 전략</h4>
+                    <ol>
+                        <li style="margin-bottom: 8px;"><strong>해외 배송 가이드와 함께 고객 진행 가이드 제공</strong> <span class="status-tag status-completed">실행</span></li>
+                        <li style="margin-bottom: 8px;"><strong>제3자 정보 제공 동의 구간 추가. 패스트박스 자체 영업</strong> <span class="status-tag status-progress">진행중</span></li>
+                        <li style="margin-bottom: 8px;"><strong>대표자앱에 배송 계약 관련 포함. 고객 동선 압축</strong> <span class="status-tag status-planned">검토필요</span></li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">서비스 CS 처리 대응</h3>
+                
+                <div style="display: flex; justify-content: space-between; margin-top: 20px;">
+                    <div style="flex: 1; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); margin-right: 15px;">
+                        <div style="background-color: var(--primary-color); color: white; padding: 8px; text-align: center; margin-bottom: 15px; border-radius: 5px;">
+                            <h4>정책 이슈</h4>
+                        </div>
+                        
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="display: inline-block; width: 40px; height: 40px; background-color: #e74c3c; color: white; border-radius: 50%; line-height: 40px; font-size: 20px;">⛔</span>
+                            <h4 style="margin-top: 10px;">무료디자인 정책 이슈 확인</h4>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p>고객사에서 사용하고 있는 무료 디자인 스킨이<br>30개 이상인 경우 멀티몰 생성 불가<br>(*솔루션 현재 사양)</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p>무료 디자인 초과 시 얼럿 문구 수정<br>"PC 또는 모바일 디자인 수가 초과되었습니다.<br>디자인 보관함에서 스킨을 삭제 후 다시 시도해주세요"</p>
+                        </div>
+                        
+                        <div style="margin-top: 30px; text-align: center; padding-top: 10px; border-top: 1px dashed #ddd;">
+                            <p><strong>해당 부분 개선 작업 완료<br>4/22 배포 완료</strong></p>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <div style="background-color: var(--primary-color); color: white; padding: 8px; text-align: center; margin-bottom: 15px; border-radius: 5px;">
+                            <h4>버그 이슈</h4>
+                        </div>
+                        
+                        <div style="text-align: center; margin-bottom: 15px;">
+                            <span style="display: inline-block; width: 40px; height: 40px; background-color: #e74c3c; color: white; border-radius: 50%; line-height: 40px; font-size: 20px;">⛔</span>
+                            <h4 style="margin-top: 10px;">서비스 신청 불가 이슈 확인</h4>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <p>PRO 이용 고객이 글로벌 추가 신청 시<br>'신청하기' 버튼이 동작하지 않음</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <p>PRO 글로벌 신청 시 쇼핑몰 선택 조건이<br>제외되어야 하나 포함되어 있어 삭제 처리</p>
+                        </div>
+                        
+                        <div style="margin-top: 30px; text-align: center; padding-top: 10px; border-top: 1px dashed #ddd;">
+                            <p><strong>해당 부분 수정 작업 완료<br>4/22 긴급 배포 완료</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="number">03.</span> 영업 전략 구체화</h2>
+            <h3 style="margin-bottom: 20px;">서비스 활성화 측면</h3>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 30px;">주요 미션 & 방향성</h3>
+                
+                <div style="display: flex; justify-content: space-between;">
+                    <div style="flex: 2; padding: 20px; background-color: #f9f9f9; border-radius: 8px; border: 1px solid #eee;">
+                        <div style="margin-bottom: 15px; display: flex; align-items: center;">
+                            <span style="display: inline-block; width: 20px; height: 20px; background-color: #6bd098; color: white; text-align: center; line-height: 20px; border-radius: 3px; margin-right: 10px;">✓</span>
+                            <h3>MISSION</h3>
+                        </div>
+                        
+                        <div style="margin-top: 30px; margin-bottom: 20px;">
+                            <h4 style="font-size: 18px; margin-bottom: 15px;">PRO 글로벌 서비스의<br>실사용 유도 및 전환 확대<br>&<br>핵심 키워드 '글로벌' 중심의<br>브랜드 이미지 제고</h4>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 3; padding-left: 20px;">
+                        <div style="background-color: #e8f4ff; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">직접적인 행동 유도 중심</h4>
+                            <p>PRO 글로벌 서비스 이용률 제고를 위한<br>전략 영업 및 공격적인 마케팅 캠페인 진행</p>
+                        </div>
+                        
+                        <div style="background-color: #f0f0f0; padding: 20px; border-radius: 8px;">
+                            <h4 style="margin-bottom: 10px;">간접적인 인식 제고 중심</h4>
+                            <p>'글로벌' 이미지를 강화하기 위한<br>대외 커뮤니케이션 및 브랜딩 전략 추진</p>
+                        </div>
+                        
+                        <div style="margin-top: 20px; text-align: right;">
+                            <p>서비스 레퍼런스 확보<br>브랜딩 요소로 추가 활용</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-headers">
+                <div class="tab-header active" data-tab="hypothesis1">가설 1</div>
+                <div class="tab-header" data-tab="hypothesis2">가설 2</div>
+                <div class="tab-header" data-tab="hypothesis3">가설 3</div>
+            </div>
+            
+            <div class="tab-content active" id="hypothesis1">
+                <div class="hypothesis">
+                    <h3 class="hypothesis-title"><span class="number">1</span>이전에 해외 판매 경험이 있는 쇼핑몰은 PRO 글로벌 전환율과 만족도가 높을 것이다</h3>
+                    
+                    <div class="hypothesis-data">
+                        <p>쉬운해외판매 사용 이력이 있는 몰 누적 8,110개 (멀티몰 생성 251개) / 패스트박스 앱 설치 몰 누적 8,472개 (예치금 충전 333개)</p>
+                    </div>
+                    
+                    <div class="action-plan">
+                        <h4>액션 플랜 (검증 방식)</h4>
+                        <ul>
+                            <li>쉬운해외판매 사용 이력 보유 몰/패스트박스 이용 몰 대상 PRO 글로벌 미신청 대상에게 맞춤형 메일링 (혜택/사례 중심 메시지로 구성하여 발송)</li>
+                            <li>관련 타겟 이용 동선 내에 팝업 노출 (관리자 페이지 첫 화면에 노출 가능 여부 확인 필요)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expected-results">
+                        <h4>예상 효과</h4>
+                        <ol>
+                            <li>해외 판매 의지가 검증된 고객 대상 빠른 전환 달성</li>
+                            <li>가설 검증을 통해 내부 잠재 고객 설득 자료로 재활용</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="hypothesis2">
+                <div class="hypothesis">
+                    <h3 class="hypothesis-title"><span class="number">2</span>현재 PRO 국내 이용 고객은 글로벌 서비스도 적극 수용할 것이며, 미이용 사유를 해소하면 전환이 가속화된다</h3>
+                    
+                    <div class="hypothesis-data">
+                        <p>PRO 국내 신청 고객 중 PRO 글로벌 신청한 고객 11%, 미이용 89% 대상 영업 진행 (※ FAS api 파라미터 기준 유튜브 생성몰 제외/테스트몰 포함)</p>
+                    </div>
+                    
+                    <div class="action-plan">
+                        <h4>액션 플랜 (검증 방식)</h4>
+                        <ul>
+                            <li>PRO 국내 이용 고객 중 PRO 글로벌을 이용하지 않는 고객 대상 서비스 안내 메일링 및 공지 메시지 발송</li>
+                            <li>미이용 고객군을 '정보 부족', '비용 부담', '관심 없음' 등으로 분류, 인터뷰 및 설문 진행하여 사유 분석 (허들 제거 캠페인으로 연결)</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="expected-results">
+                        <h4>예상 효과</h4>
+                        <ol>
+                            <li>PRO 통합 신청 강화 (국내/글로벌 패키지 연계 모델 확립)</li>
+                            <li>서비스 이용 장벽 및 우선순위 데이터 확보(개선 지점 수립)</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tab-content" id="hypothesis3">
+                <div class="hypothesis">
+                    <h3 class="hypothesis-title"><span class="number">3</span>신규 서비스 확산에는 '눈에 보이는 성공 레퍼런스'가 결정적, 대표 성공 사례를 빠르게 만드는것이 서비스 홍보 효과를 극대화한다</h3>
+                    
+                    <div class="hypothesis-data">
+                        <p>PRO 글로벌 판매 개시 완료 93개 & PRO 국내 신청 고객 자체 운영 해외몰 보유 고객사 54개 우선 검토 필요</p>
+                    </div>
+                    
+                    <div class="action-plan">
+                        <h4>액션 플랜 (검증 방식)</h4>
+                        <ul>
+                            <li>성장 잠재력·카테고리 다양성·협업 난이도 등 스코어링하여 파일럿 10~20개 고객사 선정</li>
+                            <li>판매 성공을 위한 성공 레퍼런스 육성 패키지 진행</li>
+                            <li>(집중 육성 → 가시적 판매 발생 → 대외 홍보 → 파급 확산 선순환)</li>
+                        </ul>
+                        <p style="margin-top: 10px;">패키지 예시:</p>
+                        <ol>
+                            <li>글로벌 마케팅 지원 (빅테크 퍼포먼스 캠페인, 인플루언서 마케팅 등)</li>
+                            <li>운영 세팅 & 현지화 적용 (데이터 기반 타겟 국가 선정, 추가 설정 적용)</li>
+                            <li>판매 지원 (CS 전문 대행 & 다국어 챗봇 지원)</li>
+                        </ol>
+                    </div>
+                    
+                    <div class="expected-results">
+                        <h4>예상 효과</h4>
+                        <ol>
+                            <li>성공 스토리 → 신뢰도 상승 → 신규 고객 유입 가속</li>
+                            <li>내부 글로벌 노하우 축적 → 향후 제품·프로세스 개선에 반영</li>
+                            <li>글로벌 키워드 브랜딩 요소로 서비스 레퍼런스몰 활용 연계</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="number">04.</span> 기능 확장 플랜</h2>
+            <h3 style="margin-bottom: 20px;">서비스 고도화 측면</h3>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">PRO 글로벌 제공 서비스 범위</h3>
+                
+                <div style="display: flex; margin-bottom: 30px;">
+                    <div style="flex: 0 0 120px; padding: 15px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        제작<br>우선<br>순위
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; padding: 15px; background-color: #fef9e8; border-radius: 5px;">
+                        <div style="text-align: center; padding: 10px; background-color: rgba(243, 156, 18, 0.1); border-radius: 20px; margin-bottom: 15px;">
+                            <h4>1순위</h4>
+                        </div>
+                        <h3 style="text-align: center; margin-bottom: 15px;">판매 환경 세팅(몰 구축)</h3>
+                        <p style="text-align: center; font-size: 14px; color: #555;">해외 판매를 위한 몰 구축 관련 핵심 기능 제작 목표<br>'해외 고객이 고객의 물건을 구매할 수 있는 인프라 구성'</p>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; padding: 15px; background-color: #fef9e8; border-radius: 5px;">
+                        <div style="text-align: center; padding: 10px; background-color: rgba(243, 156, 18, 0.1); border-radius: 20px; margin-bottom: 15px;">
+                            <h4>2순위</h4>
+                        </div>
+                        <h3 style="text-align: center; margin-bottom: 15px;">판매 촉진(몰 활성화)</h3>
+                        <p style="text-align: center; font-size: 14px; color: #555;">해외 판매 활성화를 몰 운영 관련 핵심 기능 제작 목표<br>'해외 고객이 유입되고, 구매하고, 재구매하는 퍼널 구성'</p>
+                    </div>
+                </div>
+                
+                <div style="padding: 15px; background-color: #f5f5f5; margin-bottom: 20px; border-radius: 5px;">
+                    <h4 style="text-align: center; margin-bottom: 15px;">제작<br>진행<br>단계</h4>
+                    <div style="text-align: center; padding: 15px 0; border-radius: 20px; background: linear-gradient(to right, var(--primary-color) 50%, #94bbee 50%);">
+                        <p style="color: white;">핵심 기능 중심 자동화 구현 → 엔진화 진행 및 적용 → 확장 영역 추가 자동화 구현 → 엔진화 진행 및 적용</p>
+                        <p style="color: #ddd; font-size: 12px; margin-top: 10px;">※ 자동화 제작 및 엔진화 병렬 진행하거나 국내 사용 엔진 차용하여 활용</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; margin-top: 30px;">
+                    <div style="flex: 0 0 120px; padding: 15px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        제작<br>진행<br>완료
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">멀티몰 신규 생성</h4>
+                            <p>영문/USD 기준 멀티몰 생성</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">쇼핑몰 기본 설정</h4>
+                            <p>주문설정, 회원설정, 알림설정, 약관설정, 배송 설정, 게시판 설정, 앱 설정</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">상품/분류 세팅</h4>
+                            <p>상품 정보 번역, HS코드 적용, 상품 분류 번역</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">스킨 및 배너 세팅</h4>
+                            <p>PRO글로벌 고정 스킨 적용, 상점 이미지 수집 기반 배너 생성 및 삽입</p>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px;">
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">기본 쿠폰 설정</h4>
+                            <p>신규 가입 고객 대상 쿠폰 설정, 첫 구매 고객 대상 쿠폰 설정</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">SEO 설정</h4>
+                            <p>상점 SEO설정, 상품별 SEO 설정</p>
+                        </div>
+                        
+                        <div style="margin-bottom: 20px;">
+                            <h4 style="margin-bottom: 10px;">리마인드 알림 설정</h4>
+                            <p>재입고 알림 상품 설정, 자동 알림 메일 사용 설정</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">PRO 글로벌 고도화 컨셉/방향성</h3>
+                
+                <div style="display: flex; margin-bottom: 20px;">
+                    <div style="flex: 0 0 120px; padding: 15px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        제작<br>분류
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; padding: 15px; background-color: #fef9e8; border-radius: 5px;">
+                        <h3 style="text-align: center; margin-bottom: 15px;">판매 환경 세팅(몰 구축)</h3>
+                        <p style="text-align: center; font-size: 14px; color: #555;">해외 판매를 위한 몰 구축 관련 핵심 기능 제작 목표<br>'해외 고객이 고객의 물건을 구매할 수 있는 인프라 구성'</p>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; padding: 15px; background-color: #fef9e8; border-radius: 5px;">
+                        <h3 style="text-align: center; margin-bottom: 15px;">판매 촉진(몰 활성화)</h3>
+                        <p style="text-align: center; font-size: 14px; color: #555;">해외 판매 활성화를 몰 운영 관련 핵심 기능 제작 목표<br>'해외 고객이 유입되고, 구매하고, 재구매하는 퍼널 구성'</p>
+                    </div>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; margin-top: 30px;">
+                    <div style="flex: 0 0 120px; margin-bottom: 10px; padding: 15px; background-color: #f5f5f5; display: flex; align-items: center; justify-content: center; text-align: center; font-weight: bold;">
+                        PRO<br>글로벌<br><br>추가<br>범위
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">커버리지 확대</h4>
+                        <ul>
+                            <li>일문몰 몰 구축 영역 확장</li>
+                            <li>글로벌 마켓 대응 준비 (마켓플러스 활용 풀오토 영역)</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">기존 관련 모듈 강화</h4>
+                        <ul>
+                            <li>상점 SEO 및 상품 SEO 추가 최적화 (로컬 키워드 추가, AAO 확장)</li>
+                            <li>쿠폰 및 고객 행동 기반 리마인드 운영 모듈 강화</li>
+                            <li>세팅 모듈 중 정기 실행 되어야 하는 운영 모듈 추가 제작</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">디테일 강화</h4>
+                        <ul>
+                            <li>상세페이지 번역 추가 (텍스트 번역 위주 최적화)</li>
+                            <li>다양한 상품군 대응 & 신뢰 요소 제공 (사이즈표 등)</li>
+                            <li>스킨/배너 등 디자인 영역 강화</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">판매 활성화 (Inside the Mall - 전환율 증대/재구매유도)</h4>
+                        <ul>
+                            <li>프로모션/이벤트 관련 모듈 제작</li>
+                            <li>확보 고객 활용 재구매 유도 메일 자동화 강화 (CRM)</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">엔진 활용 강화</h4>
+                        <ul>
+                            <li>국내 엔진의 글로벌화 적용</li>
+                            <li>글로벌 단독 엔진 개발 필요 범위 구체화</li>
+                        </ul>
+                    </div>
+                    
+                    <div style="flex: 1; margin-left: 15px; margin-bottom: 15px; padding: 15px; background-color: white; border-radius: 5px; box-shadow: 0 1px 3px rgba(0,0,0,0.1);">
+                        <h4 style="margin-bottom: 10px;">판매 활성화 (Outside the Mall - 신규 유입 확대)</h4>
+                        <ul>
+                            <li>차세대 마케팅 솔루션 글로벌 영역 활용 확장(소액 퍼포먼스 캠페인)</li>
+                            <li>인플루언서 시딩, SNS 채널 마케팅 자동화 영역 연결 검토</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h2 class="section-title"><span class="number">05.</span> 자동화 진행 현황</h2>
+            <h3 style="margin-bottom: 20px;">서비스 이슈 관리 & 대응 측면</h3>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 30px;">시스템 운영 현황</h3>
+                
+                <div style="display: flex; flex-wrap: wrap; justify-content: space-between; margin-bottom: 30px;">
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">몰당 세팅 시간</div>
+                        <div style="font-size: 36px; font-weight: bold;">17 분</div>
+                    </div>
+                    
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">시간당 세팅 건수</div>
+                        <div style="font-size: 36px; font-weight: bold;">20 건</div>
+                    </div>
+                    
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">TASK 에러율</div>
+                        <div style="font-size: 36px; font-weight: bold;">1.5 %<span style="font-size: 16px; color: #4cd964;">(-0.1)</span></div>
+                    </div>
+                    
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">배너 템플릿 수</div>
+                        <div style="font-size: 36px; font-weight: bold;">11 종<span style="font-size: 16px; color: #999;">(-)</span></div>
+                    </div>
+                    
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">실행 가능 TASK 수</div>
+                        <div style="font-size: 36px; font-weight: bold;">48 개<span style="font-size: 16px; color: #4cd964;">(+2)</span></div>
+                    </div>
+                    
+                    <div style="width: 200px; background-color: #000; color: #ffc107; padding: 15px; border-radius: 8px; text-align: center; margin-bottom: 15px;">
+                        <div style="font-size: 14px; margin-bottom: 5px;">주간 TASK 실행 수</div>
+                        <div style="font-size: 36px; font-weight: bold;">6,074 건</div>
+                    </div>
+                </div>
+                
+                <div style="display: flex; flex-wrap: wrap; margin-top: 20px;">
+                    <div style="flex: 1; margin-right: 15px;">
+                        <div style="background-color: #000; color: white; padding: 10px; border-radius: 5px 5px 0 0; text-align: center;">
+                            <h4>속도 향상</h4>
+                        </div>
+                        <div style="padding: 20px; background-color: #f9f9f9; border-radius: 0 0 5px 5px;">
+                            <p style="margin-bottom: 15px; color: var(--primary-color);"><strong>● 쇼핑몰 세팅 엔진화 시작</strong></p>
+                            <p>(기존) 쇼핑몰 생성 후 세팅 자동화<br>→ (현재) 쇼핑몰 생성 시 기본 세팅</p>
+                            <p style="color: var(--secondary-color); margin-top: 10px;">⇒ 세팅 시간 약 10분 절감 예상</p>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1; margin-right: 15px;">
+                        <div style="background-color: #000; color: white; padding: 10px; border-radius: 5px 5px 0 0; text-align: center;">
+                            <h4>품질 개선</h4>
+                        </div>
+                        <div style="padding: 20px; background-color: #f9f9f9; border-radius: 0 0 5px 5px;">
+                            <p style="margin-bottom: 15px; color: var(--primary-color);"><strong>● 에러율 감소</strong></p>
+                            <p>(기존) 1.6% → (현재) 1.5%</p>
+                            <p style="color: var(--secondary-color); margin-top: 10px;">⇒ 예외케이스 수정</p>
+                        </div>
+                    </div>
+                    
+                    <div style="flex: 1;">
+                        <div style="background-color: #000; color: white; padding: 10px; border-radius: 5px 5px 0 0; text-align: center;">
+                            <h4>운영 역량 확대</h4>
+                        </div>
+                        <div style="padding: 20px; background-color: #f9f9f9; border-radius: 0 0 5px 5px;">
+                            <p style="margin-bottom: 15px; color: var(--primary-color);"><strong>● 실행 가능 TASK 수 증대</strong></p>
+                            <p>(기존) 46개 → (현재) 48개</p>
+                            <p style="color: var(--secondary-color); margin-top: 10px;">⇒ 배너 변경 고도화 TASK 제작<br>메인 진열 연동 TASK 제작</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="data-block">
+                <h3 style="margin-bottom: 20px;">시스템 제작 로드맵</h3>
+                <h4 style="margin-bottom: 15px;">PRO 글로벌 고도화</h4>
+                
+                <table class="task-table">
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">구분</th>
+                            <th style="width: 20%;">세부 목표</th>
+                            <th style="width: 45%;">과제</th>
+                            <th style="width: 10%;">상태</th>
+                            <th style="width: 10%;">목표 일정</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">기능 강화</td>
+                            <td>고객 편의</td>
+                            <td>메인 진열 연동 (메인 - 멀티)</td>
+                            <td><span class="status-tag status-completed">완료</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td>고객 편의</td>
+                            <td>fastbox 이용몰 - 배송업체 /배송 정책 추가</td>
+                            <td><span class="status-tag status-completed">완료</span></td>
+                            <td>4월 3W</td>
+                        </tr>
+                        <tr>
+                            <td>CS 사전대응</td>
+                            <td>CRM - 쿠폰 적용 기준변경 (전체몰 반영)</td>
+                            <td><span class="status-tag status-completed">완료</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td>CS 사전대응</td>
+                            <td>해외 스킨 - 푸터 국내 연락처 삭제</td>
+                            <td><span class="status-tag status-completed">완료</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td>디자인 개선</td>
+                            <td>배너변경 고도화 - 상품 이미지 수집, 이미지 활용 강화</td>
+                            <td><span class="status-tag status-completed">완료</span></td>
+                            <td>4월 3W</td>
+                        </tr>
+                        <tr>
+                            <td>기능 강화</td>
+                            <td>매출 증대</td>
+                            <td>사이트/상품 SEO 고도화</td>
+                            <td><span class="status-tag status-progress">진행중</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="3">신규 기능</td>
+                            <td>매출 증대</td>
+                            <td>메인 자동 진열 고도화 (전체몰 반영)</td>
+                            <td><span class="status-tag status-progress">진행중</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td>고객 편의</td>
+                            <td>상품 옵션 추가금액 환율 자동계산 (전체몰 반영)</td>
+                            <td><span class="status-tag status-progress">진행중</span></td>
+                            <td>4월 4W</td>
+                        </tr>
+                        <tr>
+                            <td>CS 사전대응</td>
+                            <td>fastbox 이용몰 - 배송 설정값 원복</td>
+                            <td><span class="status-tag status-progress">진행중</span></td>
+                            <td>5월 1W</td>
+                        </tr>
+                    </tbody>
+                </table>
+                
+                <div style="margin-top: 15px; text-align: right;">
+                    <p>총 16건 ▲2건 (완료 12건 / 진행중 4건)</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="section" style="margin-bottom: 50px;">
+            <h2 style="text-align: center; font-size: 48px; font-weight: 300; margin: 30px 0;">E.o.D</h2>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 탭 기능 구현
+            const tabHeaders = document.querySelectorAll('.tab-header');
+            const tabContents = document.querySelectorAll('.tab-content');
+            
+            tabHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    const tabId = this.getAttribute('data-tab');
+                    
+                    // 모든 탭 헤더와 콘텐츠 비활성화
+                    tabHeaders.forEach(h => h.classList.remove('active'));
+                    tabContents.forEach(c => c.classList.remove('active'));
+                    
+                    // 클릭한 탭 활성화
+                    this.classList.add('active');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
